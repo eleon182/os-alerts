@@ -1,4 +1,5 @@
 var lo = require('lodash');
+var fs = require('fs');
 var debug = require('debug')('main');
 
 module.exports = {
@@ -9,6 +10,7 @@ module.exports = {
 };
 
 var history = [];
+var fileName = 'alert_history';
 
 function getHistory(){
     return history;
@@ -21,7 +23,13 @@ function displayHistory(){
 }
 
 function display(msg, level){
-    debug(msg);
+    debug('Alert: ' + msg + ' / Level: ' + level);
+}
+
+function writeToFile(){
+    fs.writeFile(fileName, JSON.stringify(history), function(err){
+        if(err)  console.log(err);
+    });
 }
 
 function addToHistory(msg, options, level){
@@ -30,6 +38,7 @@ function addToHistory(msg, options, level){
         options: options,
         level: level
     });
+    writeFile();
 }
 
 function debug(msg, options){
