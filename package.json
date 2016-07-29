@@ -5,11 +5,12 @@
     "type": "git",
     "url": "https://github.com/eleon182/os-alerts.git"
   },
-  "description": "Alerts creator",
+  "description": "Handle all alerts for logs and debugging (with history)",
   "main": "index.js",
   "author": "Esteban Leon",
   "scripts": {},
   "dependencies": {
+    "debug": "^2.2.0",
     "lodash": "^4.14.1"
   }
 }

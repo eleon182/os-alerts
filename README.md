@@ -1,3 +1,9 @@
 #os-alerts
 
-require this module to handle all alerting
+#Description
+Require this module to handle all alerting.
+
+#Features
+- Allows user to retrieve history of all logs.
+
+
