@@ -1,6 +1,6 @@
 {
   "name": "alerts-factory",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "repository": {
     "type": "git",
     "url": "https://github.com/eleon182/os-alerts.git"
@@ -9,6 +9,5 @@
   "main": "index.js",
   "author": "Esteban Leon",
   "scripts": {},
-  "dependencies": {
-  }
+  "dependencies": {}
 }
