@@ -1,4 +1,3 @@
-#OS level alerts
+#os-alerts
 
-TODO:
-build out an alert system from node.js that will submit an OS level alert
+require this module to handle all alerting
