@@ -10,5 +10,6 @@ Require this module to handle all alerting for debugging purposes.
 #Future
 - Save to local file or upload to S3
 - Suppress alerts based on level
+- Web interface to view and search through logs
 
 
