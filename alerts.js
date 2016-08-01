@@ -1,6 +1,7 @@
 var lo = require('lodash');
 var fs = require('fs');
 var debug = require('debug')('main');
+var engine = require('./engine.js');
 
 module.exports = {
     debug: debug,
@@ -9,36 +10,14 @@ module.exports = {
     getHistory: getHistory
 };
 
-var history = [];
-var fileName = 'alert_history';
-
 function getHistory(){
-    return history;
+    return engine.getHistory();
 }
 
 function displayHistory(){
     history.forEach(function(val){
         display(val.msg);
     });
-}
-
-function display(msg, level){
-    debug('Alert: ' + msg + ' / Level: ' + level);
-}
-
-function writeToFile(){
-    fs.writeFile(fileName, JSON.stringify(history), function(err){
-        if(err)  console.log(err);
-    });
-}
-
-function addToHistory(msg, options, level){
-    history.push({
-        msg: msg,
-        options: options,
-        level: level
-    });
-    writeFile();
 }
 
 function debug(msg, options){
