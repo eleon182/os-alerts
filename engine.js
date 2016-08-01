@@ -1,3 +1,6 @@
+var lo = require('lodash');
+var fs = require('fs');
+
 module.exports = {
     display: display,
     writeToFile,
@@ -9,7 +12,7 @@ module.exports = {
 var history = [];
 var fileName = 'alert_history';
 
-function getHistory(){
+function getHistory() {
     return history;
 }
 

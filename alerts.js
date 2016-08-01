@@ -7,26 +7,25 @@ module.exports = {
     debug: debug,
     error: error,
     displayHistory: displayHistory,
-    getHistory: getHistory
+    getHistory: getHistory,
 };
 
-function getHistory(){
+function getHistory() {
     return engine.getHistory();
 }
 
-function displayHistory(){
-    history.forEach(function(val){
+function displayHistory() {
+    engine.getHistory().forEach(function(val) {
         display(val.msg);
     });
 }
 
-function debug(msg, options){
-    addToHistory(msg, options, 1);
+function debug(msg, options) {
+    engine.addToHistory(msg, options, 1);
     display(msg);
 }
 
-function error(msg, options){
-    addToHistory(msg, options, 2);
+function error(msg, options) {
+    engine.addToHistory(msg, options, 2);
     display(msg);
 }
-
